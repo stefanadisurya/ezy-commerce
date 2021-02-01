@@ -68,7 +68,7 @@ public class FragmentDetail extends Fragment {
                         }
                     }
                 } else if(response.body().statusCode == 500) {
-
+                    Toast.makeText(getContext(), "Book not found", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -83,7 +83,7 @@ public class FragmentDetail extends Fragment {
         if(getActivity().getIntent().hasExtra("id")) {
             id = getActivity().getIntent().getIntExtra("id", 1);
         } else {
-            Toast.makeText(getContext(), "No data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Book not found", Toast.LENGTH_SHORT).show();
         }
     }
 }
